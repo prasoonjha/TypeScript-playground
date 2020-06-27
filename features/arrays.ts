@@ -12,7 +12,7 @@ const carsByMake = [["f150"], ["corolla"], ["camaro"]];
 //why use typed arrays?
 
 //help with inference when extracting values
-const car = carMakers[0];
+const yourCar = carMakers[0];
 const myCar = carMakers.pop();
 //prevent icompatible values
 carMakers.push(100);
