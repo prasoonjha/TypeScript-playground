@@ -1,0 +1,14 @@
+{
+  "name": "sort",
+  "version": "1.0.0",
+  "description": "An application that sorts all data out there!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrentlt npm:start:*"
+  },
+  "author": "webmessi",
+  "license": "ISC"
+}
