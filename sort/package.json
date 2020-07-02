@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:build": "tsc -w",
     "start:run": "nodemon build/index.js",
-    "start": "concurrentlt npm:start:*"
+    "start": "concurrently npm:start:*"
   },
   "author": "webmessi",
   "license": "ISC"

@@ -1,3 +1,7 @@
-console.log("hi there!");
+import { Sorter } from "./Sorter";
+import { NumbersCollection } from "./NumbersCollection";
 
-console.log("hi there!");
+const numbersCollection = new NumbersCollection([10, 0, -5]);
+const sorter = new Sorter(numbersCollection);
+sorter.sort();
+console.log(numbersCollection.data);
