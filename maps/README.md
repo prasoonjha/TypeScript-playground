@@ -1,4 +1,4 @@
-# Project Title
+# OhMyMap
 
 A simple application written in TypeScript that uses Google maps to mark randomly generated users and companies on a map.
 
@@ -36,6 +36,3 @@ parcel index.html
 * [TypeScript](https://www.typescriptlang.org/) - TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
 * [NodeJS](https://nodejs.org/en/) - Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
