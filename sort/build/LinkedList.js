@@ -1,6 +1,20 @@
 "use strict";
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.LinkedList = void 0;
+var Sorter_1 = require("./Sorter");
 var Node = /** @class */ (function () {
     function Node(data) {
         this.data = data;
@@ -8,9 +22,12 @@ var Node = /** @class */ (function () {
     }
     return Node;
 }());
-var LinkedList = /** @class */ (function () {
+var LinkedList = /** @class */ (function (_super) {
+    __extends(LinkedList, _super);
     function LinkedList() {
-        this.head = null;
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.head = null;
+        return _this;
     }
     LinkedList.prototype.add = function (data) {
         var node = new Node(data);
@@ -35,28 +52,29 @@ var LinkedList = /** @class */ (function () {
                 length++;
                 node = node.next;
             }
+            return length;
         },
         enumerable: false,
         configurable: true
     });
     LinkedList.prototype.at = function (index) {
         if (!this.head) {
-            throw new Error("Index out of bounds!");
+            throw new Error("Index out of bounds");
         }
         var counter = 0;
         var node = this.head;
-        while (node.next) {
+        while (node) {
             if (counter === index) {
                 return node;
             }
             counter++;
             node = node.next;
         }
-        throw new Error("Index out of bounds!");
+        throw new Error("Index out of bounds");
     };
     LinkedList.prototype.compare = function (leftIndex, rightIndex) {
         if (!this.head) {
-            throw new Error("List is empty!");
+            throw new Error("List is empty");
         }
         return this.at(leftIndex).data > this.at(rightIndex).data;
     };
@@ -72,11 +90,11 @@ var LinkedList = /** @class */ (function () {
             return;
         }
         var node = this.head;
-        while (node.next) {
+        while (node) {
             console.log(node.data);
             node = node.next;
         }
     };
     return LinkedList;
-}());
+}(Sorter_1.Sorter));
 exports.LinkedList = LinkedList;
