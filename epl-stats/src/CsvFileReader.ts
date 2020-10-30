@@ -1,8 +1,13 @@
 import fs from "fs";
+import { MatchResult } from "./matchResult";
 
-export class CsvFileReader {
-  data: string[][] = [];
+type MatchData = [Date, string, string, number, number, MatchResult, string]; //tuple
+
+export abstract class CsvFileReader {
+  data: MatchData[] = [];
   constructor(public fileName: string) {}
+
+  abstract mapRow(row: string[]): MatchData;
 
   read(): void {
     this.data = fs
@@ -10,6 +15,10 @@ export class CsvFileReader {
         encoding: "utf-8",
       })
       .split("\n")
-      .map((row: string): string[] => row.split(","));
+      .map((row: string): string[] => {
+        return row.split(",");
+      })
+      .map(this.mapRow);
   }
+
 }

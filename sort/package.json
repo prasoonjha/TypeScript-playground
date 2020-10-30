@@ -1,7 +1,7 @@
 {
   "name": "sort",
   "version": "1.0.0",
-  "description": "An application that sorts all data out there!",
+  "description": "An application that sort sortables.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

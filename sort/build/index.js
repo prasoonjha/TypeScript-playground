@@ -6,7 +6,7 @@ var LinkedList_1 = require("./LinkedList");
 var numbersCollection = new NumbersCollection_1.NumbersCollection([10, 0, -5]);
 var charactersCollection = new CharactersCollection_1.CharactersCollection("hello!XD");
 var linkedList = new LinkedList_1.LinkedList();
-linkedList.add(-3);
+linkedList.add(-2);
 linkedList.add(0);
 linkedList.add(-7);
 linkedList.add(10);
